@@ -1,0 +1,4 @@
+.env
+weather/
+__pycache__/
+*.pyc
