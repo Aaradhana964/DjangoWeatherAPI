@@ -22,8 +22,8 @@ A weather web application built using Django that allows users to search for wea
 
 ## 📂 Project Structure
 
-```
-weather-project/
+```text
+DjangoWeatherAPI/
 │── weatherapi/
 │── weatherapp/
 │── templates/
@@ -31,20 +31,20 @@ weather-project/
 │── .gitignore
 │── README.md
 ```
-
 ## ⚙️ Installation
 
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/Aaradhana964/weather-project.git
+git clone https://github.com/Aaradhana964/DjangoWeatherAPI.git
 ```
 
 ### 2. Navigate to the project folder
 
 ```bash
-cd weather-project
+cd DjangoWeatherAPI
 ```
+
 
 ### 3. Create a virtual environment
 
