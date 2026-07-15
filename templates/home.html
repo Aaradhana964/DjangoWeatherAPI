@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+    body {
+        background-color: white;
+        color: rgb(27, 27, 27);
+    }
+
+    header {
+        background-color: rgb(42, 42, 206);
+        color: white;
+        padding: 20px 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header h1 {
+        font-size: 30px;
+    }
+
+    header div {
+        display: flex;
+        gap: 15px;
+    }
+
+    button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: white;
+        color: rgb(64, 64, 199);
+        font-size: 15px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        background-color: rgb(253, 225, 196);
+    }
+
+    section {
+        width: 80%;
+        max-width: 800px;
+        margin: 80px auto;
+        text-align: center;
+        background-color: rgb(182, 238, 248);
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 5px 4px 10px rgba(53, 53, 53, 0.1);
+    }
+
+    section h1 {
+        color: #3830d4;
+        margin-bottom: 20px;
+    }
+
+    section p {
+        font-size: 15px;
+        line-height: 1.8;
+    }
+</style>
+</head>
+<body>
+    <header>
+        <h1>Weather API</h1>
+        <div>
+        <a href="{% url 'register' %}"><button>register</button></a>
+        <a href="{% url 'login' %}"> <button>login</button></a>
+        </div>
+    </header>
+    <section>
+        <h1>Welcome to the Weather App</h1>
+        <p>
+    Check real-time weather updates for any city, including temperature, humidity, wind speed, and current weather conditions through a simple and user-friendly interface.</p>
+    </section>
+</body>
+</html>

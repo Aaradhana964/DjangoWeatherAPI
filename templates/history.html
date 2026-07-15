@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather History</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            padding: 30px;
+        }
+        h1 {
+            color: rgb(79, 70, 229);
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: white;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        th {
+            background-color: rgb(79, 70, 229);
+            color: white;
+            padding: 12px;
+        }
+
+        td {
+            padding: 12px;
+            border-bottom: 1px solid rgb(221, 221, 221);
+        }
+
+        tr:hover {
+            background-color: rgb(241, 245, 255);
+        }
+
+        a {
+            text-decoration: none;
+            margin-right: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <table border="1">
+        <tr>
+            <th>City</th>
+            <th>Country</th>
+            <th>Temperature</th>
+            <th>Actions</th>
+        </tr>
+
+        {% for report in reports %}
+        <tr>
+            <td>{{ report.city }}</td>
+            <td>{{ report.country }}</td>
+            <td>{{ report.temperature }}</td>
+            <td>
+                <a href="{% url 'update_weather' report.id %}">Edit</a>
+                <a href="{% url 'delete_weather' report.id %}">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+
+    </table>
+
+</body>
+</html>
